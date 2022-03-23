@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/styles.css" type="text/css">
+    
     
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,33 +14,36 @@
     <!-- responsividade -->
     <link rel="stylesheet" href="style/responsive.css">
 
-    <!-- owl css -->
+    <!-- css -->
     <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
-
+    <link rel="stylesheet" href="style/modal.css">
+    <link rel="stylesheet" href="style/styles.css" type="text/css">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/af38a882ad.js" crossorigin="anonymous" defer></script>
     <title>Netflix clone</title>
-    <!-- owl js -->
+    <link rel="shortcut icon" type="image/png" src="/img/logo.png" class="iconx">
+    <!-- js -->
     <script src="js/owl/jquery.min.js" defer></script>
     <script src="js/owl/owl.carousel.min.js" defer></script>
     <script src="js/owl/main.js" defer></script>
     <script src="js/api.js" defer></script>
+    <script src="js/modal.js" defer></script>
     <!-- icon -->
-    <link rel="icon" src="/img/logo.png" class="iconx">
+    
     
 </head>
 <body>
     <header>
         <div class="container">
-            <h2 class="logo">NETFLIX</h2>
+            <a href="#inicio" class="logo">NETFLIX</a>
             <nav>
                 <a href="#inicio">Inicio</a>
                 <a href="#">Séries</a>
                 <a href="#">Filmes</a>
                 <a href="#">Documentários</a>
                 <input type="search" class="search-box" id="search-box" placeholder="Buscar filme">
-                <button type="submit" class="search-button" onclick="searchMovie()"><a href="#results">Pesquisar</a></button>
+                <button type="submit" class="search-button" onclick="searchMovie()" id="myBtn">Pesquisar</button>
             </nav>
         </div>
     </header>
@@ -52,14 +55,14 @@
                 <p class="descricao">Um político inescrupuloso não mede esforços para conquistar o poder nos EUA neste drama vencedor do Emmy e do Globo de Ouro. Assista agora a nova temporada de House Of Cards</p>
            
                 <div class="botoes">
-                    <button role="button" class="botao">
+                    <a href="https://www.youtube.com/watch?v=SvSkxBYuoQY" target="_blank"><button role="button" class="botao">
                         <i class="fa-solid fa-play"></i>
                         Assista agora
-                    </button>
-                    <button role="button" class="botao">
+                    </button></a>
+                    <a href="https://pt.wikipedia.org/wiki/House_of_Cards_(s%C3%A9rie_americana)" target="_blank"><button role="button" class="botao">
                         <i class="fa-solid fa-circle-info"></i>
                         Mais informações
-                    </button>
+                    </button></a>
                 </div>
             </div>
         </div>
@@ -98,8 +101,11 @@
             </div>     
         </div>
     </div>
-            <div class="search-results" id="results">
-                <div class="search-movies"></div>
+            <div class="modal" id="myModal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="search-movies box-filme"></div>
+                </div>
             </div>
 </body>
 </html>
