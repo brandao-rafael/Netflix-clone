@@ -16,8 +16,9 @@ body{
 }
 
 .iconx{
-    width: 16px;
-    height: auto;
+    width: 30px;
+    height: 30px;
+    
 }
 
 .search-box{
@@ -67,6 +68,7 @@ header .logo{
     font-family: 'Bebas Neue', cursive;
     font-size: 50px;
     font-weight: 400;
+    text-decoration: none;
 }
 
 header nav a{
@@ -84,7 +86,7 @@ header nav a:hover{
 
 .filme-principal{
     font-size: 16px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)100%), url('/img/houseofcards.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)100%), url('/img/houseofcards.jpg');
 
     height: 400px;
     background-size: cover;
@@ -135,9 +137,9 @@ header nav a:hover{
 }
 
 .box-filme{
-    height: 100%;
-    width: auto;
-    display: block;
+    height: auto;
+    width: 160px;
+    margin: 15px;
 
     cursor: pointer;
 }
@@ -147,15 +149,7 @@ header nav a:hover{
     margin-top: 10px;
 }
 
-.search-results{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
-    height: auto;
-    max-width: 400px;
-}
 .search-movies{
-    height: auto;
-    max-width: 400px;
+    display: inline;
+    width: 100%;
 }
